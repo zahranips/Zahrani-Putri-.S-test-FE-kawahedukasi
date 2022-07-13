@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="text/javascript">
+function validation(){
+  var textValidation = /^[a-zA-Z ]+$/;
+  var name = document.getElementById("name");
+  if (name.value.match(textValidation)) {
+      alert("Sistem memeriksa data anda valid dengan ketentuan kami dengan inputan halo" + name.value + " selamat datang " );
+  } else {
+      alert("Sistem kami menolak untuk inputan berisi angka");
+      name.value="";
+      name.focus();
+      return false;
+  }
+}
+</script>
+</head>
+<body>
+
+Nama:<br>
+<input type="text" id="name">
+<button onclick="validation()"> Check </button>
+
+</body>
+</html>
